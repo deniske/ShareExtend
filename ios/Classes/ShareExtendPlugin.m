@@ -65,6 +65,9 @@
     if (!CGRectIsEmpty(origin)) {
         activityViewController.popoverPresentationController.sourceRect = origin;
     }
+    activityViewController.excludedActivityTypes = @[
+        UIActivityTypeCopyToPasteboard
+    ];
     [activityViewController setValue:subject forKey:@"subject"];
     [controller presentViewController:activityViewController animated:YES completion:nil];
 }
